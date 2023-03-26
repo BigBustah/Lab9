@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>lab9</title>
+        
+		<!--put your external stylesheet links here-->
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- link to leaflet styles -->
+		<link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css" />
+		<!-- link to leaflet scripts -->
+		<script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+
+		<!--you can also place internal styles here; you would place these within <style> tags-->
+
+    </head>
+
+    <body>
+        <!--put your initial page content here-->
+		<div id="div1">
+		<p>
+			Q2. The styleALL function essentially combines the styling provided by styles.css, with any variable you include in it (points in this case, as can be seen in 
+			if (feature.geometry.type == "Point")). This allows us to modify the points on our map in a variety of ways, such as changing their color, and finally function returns the styles object
+		</p>
+		<p>
+			Q4. Feature is basically just the data we are calling on, while Layer calls upon our styling parameters to change the look of the map features.
+		</p>
+		<p>
+			Q5. layer.options.fill just fills out the points on the map. layer.getLatLng() retrieves the LatLng. So the key difference is that the former modifies things, while the latter fetches things.
+		</p>
+		<p>
+			Q6. Upon reloading the map, all our points have become much larger, as well as lose their color. Size increased because we increased radius, and color was lost because we disabled our color filling, these are both examples of changing the style.
+		</p>
+		
+
+		</div>
+		<select class="li-nav" name="mapdropdown" id="mapdropdown" onChange="loadMap(this.value);">
+		<option value="map0" selected="selected" disabled>Load a map</option>
+		<option value='mapa'>Map A</option>
+		<option value='mapb'>Map B</option>
+		</select>
+
+		<div id="mapdiv">
+		
+		</div>
+		
+        <!--you can also use this space for internal scripts; you would place these within <script> tags-->
+
+        
+		
+		<!--put your external script links here-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
